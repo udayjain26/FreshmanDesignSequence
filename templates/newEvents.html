@@ -1,0 +1,55 @@
+
+<html>
+    <head>
+        <title>Find A Partner</title>
+        <link type = "text/css" rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link type = "text/css" rel="stylesheet" href = "https://findapartner-481df.firebaseapp.com/stylesheets/app.css">
+
+    </head>
+    <body>
+        <div class = "ui fixed inverted menu">
+            <div class = "ui container">
+                <div class = "header item"><i class="users icon"></i>Find A Partner</div>
+                <a href = "/events" class = "item">Event List</a>
+                <a href = "/events/new" class = "item"> New Event</a>
+                <a href = "{% url 'logout' %}" class = "item"> Logout</a>
+            </div>
+
+        </div>
+
+
+<div class = "ui main text container segment">
+    <div class = "ui huge header">New Event</div>
+    <form class = "ui form" action ="" method = "POST">
+
+<!--
+        <div class = "field">
+            <label>Title</label>
+            <input type = "text" name = "event[title]" placeholder = "title">
+        </div>
+        <div class = "field">
+            <label>Location</label>
+        <input type = "text" name = "event[location]" placeholder = "location">
+        </div>
+        <div class = "field">
+            <label>Time</label>
+        <input type = "text" name = "event[time]" placeholder = "time">
+        </div>
+        <div class = "field">
+            <label>Image</label>
+        <input type = "text" name = "event[image]" placeholder = "image">
+        </div>
+        <div class = "field">
+            <label>Description</label>
+        <textarea name = "event[description]"></textarea>
+        </div>
+-->
+            {% csrf_token %}
+            {{ form.as_p }}
+
+        <input class = "ui blue big basic button" type = "submit">
+    </form>
+</div>
+
+    </body>
+</html>

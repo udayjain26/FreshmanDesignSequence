@@ -1,0 +1,47 @@
+
+<html>
+    <head>
+        <title>Find A Partner</title>
+        <link type = "text/css" rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link type = "text/css" rel="stylesheet" href = "https://findapartner-481df.firebaseapp.com/stylesheets/app.css">
+
+    </head>
+    <body>
+        <div class = "ui fixed inverted menu">
+            <div class = "ui container">
+                <div class = "header item"><i class="users icon"></i>Find A Partner</div>
+                <a href = "/" class = "item">Event List</a>
+                <a href = "/events/new" class = "item"> New Event</a>
+                <a href = "/users" class = "item"> Users</a>
+                <a href = "/users/new" class = "item"> New Users</a>
+            </div>
+
+        </div>
+
+
+<div class = "ui main text container segment">
+    <div class = "ui huge header">Coding at Millenium</div>
+    <div class = "ui top attached">
+        <div class = "item">
+            <img class = "ui centered rounded image" src = "https://upload.wikimedia.org/wikipedia/commons/b/b8/Rush_Building_-_Drexel_University_-_IMG_7301.JPG">
+            <div class = "content">
+                <h3>Location:RUSH  BUILDING</h3>
+                <h4>Time:234234</h4>
+            </div>
+            <div class = "description">
+                <p>wfhiuefhwkeufwh</p>
+            </div>
+            <span>Created:Tue May 14 2019</span>
+        </div>
+        <button type="button" class = "ui black basic button">Upvote</button>
+        <button type="button" class = "ui blue basic button">Comment</button>
+        <button type="button" class = "ui green basic button">Add to My Calendar</button>
+        <a class = "ui basic orange button" href = "/events/5cda10194796070844cad9ee/edit">Edit</a>
+        <form action = "/events/5cda10194796070844cad9ee?_method=DELETE" method = "POST">
+            <button id = "delete" class = "ui red basic button">Delete Event</button>
+        </form>
+    </div>
+</div>
+
+    </body>
+</html>
