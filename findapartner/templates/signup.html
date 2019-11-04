@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="https://findapartner-481df.firebaseapp.com/stylesheets/style.css">
+<link type = "text/css" rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<style>
+    body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+    }
+</style>
+
+<div id = "home" >
+<div class="ui raised very padded text container segment">
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui image header">
+      <div class="content">
+        Register
+      </div>
+    </h2>
+    <form method="post" class = "ui large form">
+        {% csrf_token %}
+        {% for field in form %}
+          <p>
+            {{ field.label_tag }}<br>
+            {{ field }}
+            {% if field.help_text %}
+              <small style="color: grey">{{ field.help_text }}</small>
+            {% endif %}
+            {% for error in field.errors %}
+              <p style="color: red">{{ error }}</p>
+            {% endfor %}
+          </p>
+        {% endfor %}
+        <button class="ui fluid large black submit button" type="submit">Sign up</button>
+      </form>
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ</title>
+  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://findapartner-481df.firebaseapp.com/stylesheets/faqstyle.css">
+</head>
+<body>
+
+<!This is the bar for the top>
+
+<nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
+	<div class ="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand"><img src="findapartner.png">
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse-main">
+			<ul class = "nav navbar-nav navbar-right">
+				<li><a class="active" href="\">Home</a></li>
+				<li><a href="{% url 'events' %}">Events</a></li>
+				<li><a href="{% url 'faqpage'%}">FAQ</a></li>
+				<li><a href="{% url 'contactpage' %}">Contact</a></li>
+				<li><a href="{% url 'login'%}">Login</a></li>
+
+			</ul>
+		</div>
+		</div>
+</nav>
+
+<h1>FAQ Section</h1>
+
+<!Content within the boxes>
+<div class = "container">
+        <div class ="acc">
+            <h3>What is Find A Partner?</h3>
+            <div class="content">
+                <div class="content-inner">
+                    <p>Find a partner is a website designed to help students here at Drexel find people to hang out with.
+						College is about the experience and creating the connections that you need to be successful as well as meeting others.
+						We accomplish this through having users post events such as a Phillies game or to even go eat at Urban.
+						In addition to just posting events, you’ll be able to make comments to ask about the event or to even say that you’re attending.
+						Find a Partner will help fix your issues of not knowing anyone easily by getting you out there and exploring with your local students.
+
+					</p>
+                </div>
+            </div>
+        </div>
+
+        <div class ="acc">
+            <h3>Why start Find a Partner?</h3>
+            <div class="content">
+                <div class="content-inner">
+                    <p>As current freshman, we understand the struggle when first coming into Drexel and knowing nobody.
+						It can be difficult to find people who you would click with and expand your friend group when you don’t know where to start.
+						We didn’t want others to go through this same dreadful feeling of struggling to make friends in the first couple weeks.
+					</p>
+                </div>
+            </div>
+        </div>
+
+        <div class ="acc">
+            <h3>Can anyone use this website?</h3>
+            <div class="content">
+                <div class="content-inner">
+                    <p>Currently we have designed it for only Drexel students but in the future,
+						we may expand this to incorporate students from other schools as well.
+					</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+	<script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src = "https://findapartner-481df.firebaseapp.com/main.js"></script>
+</body>
+</html>

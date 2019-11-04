@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Find A Partner</title>
+        <link type = "text/css" rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link type = "text/css" rel="stylesheet" href = "https://findapartner-481df.firebaseapp.com/stylesheets/app.css">
+
+    </head>
+    <body>
+        <div class = "ui fixed inverted menu">
+            <div class = "ui container">
+                <div class = "header item"><i class="users icon"></i>Find A Partner</div>
+                <a href = "/" class = "item">Home</a>
+                <a href = "/" class = "item">Event List</a>
+                <a href = "/events/new" class = "item"> New Event</a>
+            </div>
+
+        </div>
+
+
+<div class = "ui main text container segment">
+    <div class = "ui huge header">{{ event.title }}</div>
+    <div class = "ui top attached">
+        <div class = "item">
+            <img class = "ui centered rounded image" src = "{{ event.image }}">
+            <div class = "content">
+                <h3>Location: {{ event.location }} </h3>
+                <h4>Time: {{ event.eventTime }} </h4>
+            </div>
+            <div class = "description">
+                <p>{{ event.description }}</p>
+            </div>
+            <span>Created: {{ event.timestamp }}</span>
+        </div>
+        <form action = "/events/5cda10194796070844cad9ee?_method=DELETE" method = "POST">
+            <button id = "delete" class = "ui red basic button">Delete Event</button>
+        </form>
+
+
+<div class="ui comments">
+    <form class = "ui reply form" action ="" method = "POST">
+
+            {% csrf_token %}
+            {{ form.as_p }}
+
+	 <input type="hidden" id="id" name="id" value="{{ event.id }}">
+
+        <input class = "ui blue big basic button" type = "submit" name = "comment" >Add Comment! </input>
+    </form>
+    {% for e in comments %}
+        <div class="comment">
+        <div class="content">
+            <a class="author">{{ e.byUser }}</a>
+            <div class="text">
+            <p>{{ e.name }}</p>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+    </div>
+</div>
+
+    </body>
+</html>

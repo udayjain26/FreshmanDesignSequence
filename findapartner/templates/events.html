@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Find A Partner</title>
+        <link type = "text/css" rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link type = "text/css" rel="stylesheet" href = "https://findapartner-481df.firebaseapp.com/stylesheets/app.css">
+
+    </head>
+    <body>
+        <div class = "ui fixed inverted menu">
+            <div class = "ui container">
+                <div class = "header item"><i class="users icon"></i>Find A Partner</div>
+                <a href = "/" class = "item">Home</a>
+                <a href = "/events" class = "item">Event List</a>
+                <a href = "{% url 'newEvents' %}" class = "item"> New Event</a>
+                <a href = "{% url 'logout' %}" class = "item"> Logout</a>
+            </div>
+
+        </div>
+
+<div class = "ui main text container">
+    <div class = "ui huge header">Event List</div>
+    <div class = "ui top attached segment">
+        <div class = "ui divided items">
+            
+
+	{% for e in events %}
+
+                <div class = "item">
+                    <div class = "image">
+                        <img src = "{{ e.image }}">
+                    </div>
+                    <div class = "content">
+                        <a class = "header" href = "/events/5cda10194796070844cad9ee">{{ e.title }}<a>
+                        <h3>Location: {{ e.location }}</h3>
+                        <h4>Time: {{ e.eventTime }}</h4>
+                        <div class = "description">
+                            <p>{{ e.description }}</p>
+                        </div>
+                        <div class = "meta">
+                            <span>Created: {{ e.timestamp }}</span>
+                        </div>
+                        <div class = "extra">
+                            <a class = "ui floated green basic button" href="/event?id={{ e.id }}">Open Thread</a>
+                        </div>
+                    </div>
+                </div>
+
+{% endfor %}
+            
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
